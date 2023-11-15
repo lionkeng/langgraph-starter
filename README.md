@@ -6,6 +6,7 @@ This is a bare minimum template for create a nodeJS project with typescript, nod
 
 - The location of your source code is expected to live under the `src` directory.
 - The main entry-point to your node application is `src/main.ts`
+- Your compiled JS code will be in the `dist` directory.
 
 for development:
 
