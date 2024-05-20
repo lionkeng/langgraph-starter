@@ -1,6 +1,6 @@
 # langgraph-starter
 
-This is a bare minimum template for create a nodeJS project with typescript, nodeJS 18 and langgraph.
+This is a bare minimum template to create a nodeJS project with typescript, nodeJS 18 and langgraph.
 
 ## getting started
 
