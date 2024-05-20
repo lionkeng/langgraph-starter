@@ -1,0 +1,5 @@
+packages:
+  # all packages in direct subdirs of examples/
+  - 'examples/*'
+  # exclude packages that are inside build-tool directory
+  - '!**/build-tool/**'
