@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "a simple nodeJS typescript template",
   "main": "main.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "build": "npx tsc",
     "build-swc": "npx swc src -d dist",
@@ -30,7 +33,12 @@
     "regenerator-runtime": "^0.14.0",
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.2.0",
-    "tsx": "^4.1.2",
+    "tsx": "^4.10.5",
     "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@langchain/core": "^0.2.0",
+    "@langchain/langgraph": "^0.0.19",
+    "@langchain/openai": "^0.0.33"
   }
 }
