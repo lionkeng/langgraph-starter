@@ -2,12 +2,12 @@ import { ChatOpenAI } from '@langchain/openai'
 import { END, MessageGraph, START } from '@langchain/langgraph'
 import { BaseMessage, HumanMessage } from '@langchain/core/messages'
 
-const mode = new ChatOpenAI({ temperature: 0 })
+const model = new ChatOpenAI({ temperature: 0 })
 
 const graph = new MessageGraph()
 const node: string = 'oracle'
 graph.addNode(node, async (state: BaseMessage[]) => {
-  return mode.invoke(state)
+  return model.invoke(state)
 })
 
 graph.addEdge(node as unknown as '__start__', END)
