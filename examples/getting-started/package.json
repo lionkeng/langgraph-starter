@@ -1,14 +1,11 @@
 {
-  "name": "node-typescript-template",
+  "name": "getting-started",
   "version": "1.0.0",
-  "description": "a simple nodeJS typescript template",
+  "description": "a simple nodeJS langgraph example to get started",
   "main": "main.js",
   "engines": {
     "node": ">=18.0.0"
   },
-  "inherits": [
-    "build-tool/package.common.json"
-  ],
   "scripts": {
     "build": "npx tsc",
     "build-swc": "npx swc src -d dist",
