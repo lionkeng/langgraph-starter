@@ -23,7 +23,11 @@ To run a specific example from the root directory.
 pnpm i --frozen-lockfile
 ```
 
-2. Then, to run an example named `getting-started`, run the following command from the root directory.
+2. Create a .env file and add OpenAI API Key as such: OPENAI_API_KEY="[INSERT YOUR API KEY]".
+
+- (Optional) add tavily API key in .env as such: TAVILY_API_KEY="[INSERT YOUR API KEY]"
+
+3. Then, to run an example named `getting-started`, run the following command from the root directory.
 
 ```
 npx lerna run dev --scope getting-started
