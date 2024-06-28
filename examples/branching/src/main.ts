@@ -61,11 +61,21 @@ const routeMessage = (state: IState) => {
   return 'tools'
 }
 
-const callModel = async (state: IState, config: RunnableConfig) => {
+interface CallModelI {
+  messages: AIMessageChunk[]
+}
+
+const callModel = async (
+  state: IState,
+  config?: RunnableConfig
+): Promise<CallModelI> => {
   const { messages } = state
   console.log('messages', messages)
   const streamOut = await boundModel?.stream(messages, config)
   let finalMessage: AIMessageChunk | null = null
+  if (!streamOut) {
+    return { messages: [] }
+  }
   for await (const chunk of streamOut) {
     if (finalMessage === null) {
       finalMessage = chunk
@@ -73,26 +83,26 @@ const callModel = async (state: IState, config: RunnableConfig) => {
       finalMessage = finalMessage.concat(chunk)
     }
   }
-  return { messages: [finalMessage] }
+  return { messages: finalMessage ? [finalMessage] : [] }
 }
 
+await searchTool.invoke({ query: "What's the weather like?" })
+const tools = [searchTool]
+const toolNode = new ToolNode<{ messages: BaseMessage[] }>(tools)
+boundModel = model.bindTools(tools)
+
+const workflow = new StateGraph<IState>({
+  channels: graphState,
+})
+  .addNode('agent', callModel)
+  .addNode('tools', toolNode)
+  .addEdge(START, 'agent')
+  .addConditionalEdges('agent', routeMessage, { finish: END, tools: 'tools' })
+  .addEdge('tools', 'agent')
+
+const graph = workflow.compile()
+
 async function runExample() {
-  await searchTool.invoke({ query: "What's the weather like?" })
-  const tools = [searchTool]
-  const toolNode = new ToolNode<{ messages: BaseMessage[] }>(tools)
-  boundModel = model.bindTools(tools)
-
-  const workflow = new StateGraph<IState>({
-    channels: graphState,
-  })
-    .addNode('agent', callModel)
-    .addNode('tools', toolNode)
-    .addEdge(START, 'agent')
-    .addConditionalEdges('agent', routeMessage, { finish: END, tools: 'tools' })
-    .addEdge('tools', 'agent')
-
-  const graph = workflow.compile()
-
   let config = { configurable: { thread_id: 'conversation-num-1' } }
   let inputs = { messages: [['user', "Hi I'm Jo."]] }
 

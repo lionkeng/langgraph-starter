@@ -1,7 +1,7 @@
 {
-  "name": "react-agent",
+  "name": "streaming",
   "version": "1.0.0",
-  "description": "a simple nodeJS langgraph example of a reACT agent",
+  "description": "a simple nodeJS langgraph example of streaming",
   "main": "main.js",
   "engines": {
     "node": ">=18.0.0"
