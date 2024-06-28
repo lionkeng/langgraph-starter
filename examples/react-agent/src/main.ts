@@ -54,7 +54,7 @@ const routeMessage = (state: IState) => {
   // If no tools are called, we can finish (respond to the user)
   if (!lastMessage?.tool_calls?.length) {
     console.log('returning END')
-    return END
+    return 'finish'
   }
   // Otherwise if there is, we continue and call the tools
   console.log('returning tools')

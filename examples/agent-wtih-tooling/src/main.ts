@@ -46,7 +46,7 @@ interface CallModelI {
 async function callModel(state: AgentState): Promise<CallModelI> {
   const { messages } = state
   const response = await model.invoke(messages)
-  // we return a list becaue this will get added to the existing list
+  // we return a list because this will get added to the existing list
   return { messages: [response] }
 }
 
