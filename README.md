@@ -1,6 +1,8 @@
 # langgraph-starter
 
-This is a mono-repo created to explore [langgraphJS](https://github.com/langchain-ai/langgraphjs). Examples in the Langgraph repo are listed as Jupyter notebooks. In this repo, we are hashing out (similar) examples but as Typescript code files. This repo also gives you a basic template with all the tooling to start a nodeJS project with Typescript and Langgraph.
+You can use this repo as a basic template with all the tooling to start a nodeJS project with Typescript and Langgraph.
+
+This is a mono-repo created to explore [langgraphJS](https://github.com/langchain-ai/langgraphjs). Examples in the Langgraph repo are provided as Jupyter notebooks. In this repo, we are hashing out (similar) examples but with all the tooling to run them as nodeJS scripts.
 
 ## tooling
 
