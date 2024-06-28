@@ -1,6 +1,6 @@
 # langgraph-starter
 
-This is a mono-repo created to explore langgraphJS.
+This is a mono-repo created to explore [langgraphJS](https://github.com/langchain-ai/langgraphjs). Examples in the Langgraph repo are listed as Jupyter notebooks. In this repo, we are hashing out (similar) examples but as Typescript code files. This repo also gives you a basic template with all the tooling to start a nodeJS project with Typescript and Langgraph.
 
 ## tooling
 
@@ -13,7 +13,7 @@ This is a mono-repo created to explore langgraphJS.
 
 ## getting started
 
-For simplicity in maintaining this as a mono-repo with multiple possible examples we are using _lerna_. Hence, "packages" in thi repo is named as _examples_. We also _workspace_ since all the examples will use the same dependencies installed at the _root_.
+For simplicity in maintaining this as a mono-repo with multiple possible examples we are using _lerna_. Hence, "packages" in this repo is named as _examples_. Since all the examples will use the same dependencies, we are installing all the dependencies at the _workspace_ / _root_ level.
 
 To run a specific example from the root directory.
 
@@ -23,17 +23,37 @@ To run a specific example from the root directory.
 pnpm i --frozen-lockfile
 ```
 
-2. Create a .env file and add OpenAI API Key as such: OPENAI_API_KEY="[INSERT YOUR API KEY]".
+2. Create a .env file
 
-- (Optional) add tavily API key in .env as such: TAVILY_API_KEY="[INSERT YOUR API KEY]"
+All the examples here use the OpenAI LLM models. Make sure you have an API key with OpenAI.
 
-3. Then, to run an example named `getting-started`, run the following command from the root directory.
-
+```bash
+OPENAI_API_KEY=<Your_OPENAI_API_KEY>
 ```
+
+In some examples, you will also need an API KEY from [Tavily Search](https://tavily.com/)
+
+```bash
+TAVILY_API_KEY=<Your_TAVILY_API_KEY>
+```
+
+3. Then, to run the named examples, use lerna from the root directory. For example, to run the example `getting-started`, run the following command from the root directory.
+
+```bash
 npx lerna run dev --scope getting-started
 ```
 
-For development, we use _tsx_. For production, you can either use _tsc_ or _swc_ to build.
+If you prefer to run the examples with _node_, do the following instead. First, transpile the typescript code.
+
+```bash
+npx lerna run build-swc --scope getting-started
+```
+
+Then, to run the example, execute the following script:
+
+```bash
+npx lerna run start --scope getting-started
+```
 
 ## configuration files
 
