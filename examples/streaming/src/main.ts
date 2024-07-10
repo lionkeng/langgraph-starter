@@ -11,6 +11,7 @@ import { ChatOpenAI } from '@langchain/openai'
 import { Runnable, RunnableConfig } from '@langchain/core/runnables'
 import { BaseLanguageModelInput } from '@langchain/core/language_models/base'
 import { ChatGenerationChunk } from '@langchain/core/outputs'
+import { StreamEvent } from '@langchain/core/tracers/log_stream'
 
 interface IState {
   messages: BaseMessage[]
@@ -70,7 +71,7 @@ const callModel = async (
   config?: RunnableConfig
 ): Promise<CallModelI> => {
   const { messages } = state
-  console.log('messages', messages)
+  // console.log('messages', messages)
   const streamOut = await boundModel?.stream(messages, config)
   let finalMessage: AIMessageChunk | null = null
   if (!streamOut) {
@@ -86,7 +87,7 @@ const callModel = async (
   return { messages: finalMessage ? [finalMessage] : [] }
 }
 
-await searchTool.invoke({ query: "What's the weather like?" })
+// await searchTool.invoke({ query: "What's the weather like?" })
 const tools = [searchTool]
 const toolNode = new ToolNode<{ messages: BaseMessage[] }>(tools)
 boundModel = model.bindTools(tools)
@@ -104,22 +105,48 @@ const graph = workflow.compile()
 
 async function runExample() {
   let config = { configurable: { thread_id: 'conversation-num-1' } }
-  let inputs = { messages: [['user', "Hi I'm Jo."]] }
+  let inputs = { messages: [['user', 'What is the weather in SF?']] }
+  // let inputs = { messages: [['user', 'Hi, my name is Joe']] }
 
   for await (const event of await graph.streamEvents(inputs, {
     ...config,
     streamMode: 'values',
-    version: 'v2',
+    version: 'v1',
   })) {
-    if (event.event === 'on_llm_stream') {
-      let chunk: ChatGenerationChunk = event.data?.chunk
-      let msg = chunk.message as AIMessageChunk
-      if (msg.tool_call_chunks && msg.tool_call_chunks.length > 0) {
-        console.log(msg.tool_call_chunks)
-      } else {
-        console.log(msg.content)
+    const eventName = event.event
+    switch (eventName) {
+      case 'on_llm_stream': {
+        let chunk: ChatGenerationChunk = event.data?.chunk
+        let msg = chunk.message as AIMessageChunk
+        if (msg.tool_call_chunks && msg.tool_call_chunks.length > 0) {
+          // console.log(msg.tool_call_chunks)
+        } else {
+          console.log(msg.content)
+        }
+        break
+      }
+      case 'on_tool_start': {
+        console.log('tool start', event.name)
+        break
+      }
+      case 'on_tool_end': {
+        console.log('tool end', event.data)
+        break
+      }
+      default: {
+        // console.log('event', eventName)
+        break
       }
     }
+    // if (event.event === 'on_llm_stream') {
+    //   let chunk: ChatGenerationChunk = event.data?.chunk
+    //   let msg = chunk.message as AIMessageChunk
+    //   if (msg.tool_call_chunks && msg.tool_call_chunks.length > 0) {
+    //     console.log(msg.tool_call_chunks)
+    //   } else {
+    //     console.log(msg.content)
+    //   }
+    // }
   }
 }
 
