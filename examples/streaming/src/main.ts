@@ -2,6 +2,7 @@ import {
   AIMessage,
   AIMessageChunk,
   BaseMessage,
+  MessageContent,
 } from '@langchain/core/messages'
 import { END, START, StateGraph, StateGraphArgs } from '@langchain/langgraph'
 import { DynamicStructuredTool } from '@langchain/core/tools'
@@ -102,13 +103,23 @@ const workflow = new StateGraph<IState>({
   .addConditionalEdges('agent', routeMessage, { finish: END, tools: 'tools' })
   .addEdge('tools', 'agent')
 
-const graph = workflow.compile()
+const agent = workflow.compile()
 
-async function runExample() {
-  let config = { configurable: { thread_id: 'conversation-num-1' } }
-  let inputs = { messages: [['user', 'What is the weather in SF?']] }
-  // let inputs = { messages: [['user', 'Hi, my name is Joe']] }
-  for await (const event of await graph.streamEvents(inputs, {
+interface ConfigI {
+  configurable: {
+    thread_id: string
+  }
+}
+
+interface GenerateMessagesInputI {
+  messages: string[][]
+}
+
+async function* generateMessages(
+  messages: GenerateMessagesInputI,
+  config: ConfigI
+): AsyncGenerator<MessageContent> {
+  for await (const event of await agent.streamEvents(messages, {
     ...config,
     streamMode: 'values',
     version: 'v2',
@@ -118,9 +129,9 @@ async function runExample() {
       case 'on_chat_model_stream': {
         let msg = event.data?.chunk as AIMessageChunk
         if (msg.tool_call_chunks && msg.tool_call_chunks.length > 0) {
-          console.log(msg.tool_call_chunks)
+          // console.log(msg.tool_call_chunks)
         } else {
-          console.log(msg.content)
+          yield msg.content
         }
         break
       }
@@ -137,6 +148,15 @@ async function runExample() {
         break
       }
     }
+  }
+}
+
+async function runExample() {
+  let config = { configurable: { thread_id: 'conversation-num-1' } }
+  let inputs = { messages: [['user', 'What is the weather in SF?']] }
+  // let inputs = { messages: [['user', 'Hi, my name is Joe']] }
+  for await (const message of generateMessages(inputs, config)) {
+    console.log(message)
   }
 }
 
