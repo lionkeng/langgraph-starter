@@ -109,7 +109,7 @@ async function runExample() {
   for await (const event of await graph.streamEvents(inputs, {
     ...config,
     streamMode: 'values',
-    version: 'v1',
+    version: 'v2',
   })) {
     if (event.event === 'on_llm_stream') {
       let chunk: ChatGenerationChunk = event.data?.chunk

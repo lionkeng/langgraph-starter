@@ -42,19 +42,19 @@ TAVILY_API_KEY=<Your_TAVILY_API_KEY>
 3. Then, to run the named examples, use lerna from the root directory. For example, to run the example `getting-started`, run the following command from the root directory.
 
 ```bash
-npx lerna run dev --scope getting-started
+pnpm dlx lerna run dev --scope getting-started
 ```
 
 If you prefer to run the examples with _node_, do the following instead. First, transpile the typescript code.
 
 ```bash
-npx lerna run build-swc --scope getting-started
+pnpm dlx lerna run build-swc --scope getting-started
 ```
 
 Then, to run the example, execute the following script:
 
 ```bash
-npx lerna run start --scope getting-started
+pnpm dlx lerna run start --scope getting-started
 ```
 
 ## configuration files
