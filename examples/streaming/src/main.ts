@@ -12,6 +12,7 @@ import { Runnable, RunnableConfig } from '@langchain/core/runnables'
 import { BaseLanguageModelInput } from '@langchain/core/language_models/base'
 import { ChatGenerationChunk } from '@langchain/core/outputs'
 import { StreamEvent } from '@langchain/core/tracers/log_stream'
+import { AI } from '@langchain/community/experimental/llms/chrome_ai'
 
 interface IState {
   messages: BaseMessage[]
@@ -107,19 +108,17 @@ async function runExample() {
   let config = { configurable: { thread_id: 'conversation-num-1' } }
   let inputs = { messages: [['user', 'What is the weather in SF?']] }
   // let inputs = { messages: [['user', 'Hi, my name is Joe']] }
-
   for await (const event of await graph.streamEvents(inputs, {
     ...config,
     streamMode: 'values',
-    version: 'v1',
+    version: 'v2',
   })) {
     const eventName = event.event
     switch (eventName) {
-      case 'on_llm_stream': {
-        let chunk: ChatGenerationChunk = event.data?.chunk
-        let msg = chunk.message as AIMessageChunk
+      case 'on_chat_model_stream': {
+        let msg = event.data?.chunk as AIMessageChunk
         if (msg.tool_call_chunks && msg.tool_call_chunks.length > 0) {
-          // console.log(msg.tool_call_chunks)
+          console.log(msg.tool_call_chunks)
         } else {
           console.log(msg.content)
         }
@@ -138,15 +137,6 @@ async function runExample() {
         break
       }
     }
-    // if (event.event === 'on_llm_stream') {
-    //   let chunk: ChatGenerationChunk = event.data?.chunk
-    //   let msg = chunk.message as AIMessageChunk
-    //   if (msg.tool_call_chunks && msg.tool_call_chunks.length > 0) {
-    //     console.log(msg.tool_call_chunks)
-    //   } else {
-    //     console.log(msg.content)
-    //   }
-    // }
   }
 }
 
