@@ -11,7 +11,6 @@ import { END, START, StateGraph, StateGraphArgs } from '@langchain/langgraph'
 import { MemorySaver } from '@langchain/langgraph'
 import { ToolNode } from '@langchain/langgraph/prebuilt'
 import { TavilySearchResults } from '@langchain/community/tools/tavily_search'
-import { ChatGenerationChunk } from '@langchain/core/outputs'
 
 // Define the state interface
 interface AgentState {
@@ -49,11 +48,13 @@ const searchTool = new DynamicStructuredTool({
 const tools = [new TavilySearchResults({ maxResults: 1 })]
 const toolNode = new ToolNode<AgentState>(tools)
 
+// calling the Anthropic model will not working when there is a tool bound
+// to it. See this issue for more details: https://github.com/langchain-ai/langgraphjs/issues/253#issuecomment-2223712378
 const model = new ChatAnthropic({
   model: 'claude-3-sonnet-20240229',
   temperature: 0,
   streaming: true,
-}).bindTools(tools)
+})
 // const model = new ChatOpenAI({
 //   model: 'gpt-4o',
 //   temperature: 0,
@@ -98,20 +99,6 @@ const checkpointer = new MemorySaver()
 // This compiles it into a LangChain Runnable.
 // Note that we're (optionally) passing the memory when compiling the graph
 const app = workflow.compile({ checkpointer })
-
-// Use the Runnable
-// const finalState = await app.invoke(
-//   { messages: [new HumanMessage('what is the weather in sf')] },
-//   { configurable: { thread_id: '42' } }
-// )
-// console.log(finalState.messages[finalState.messages.length - 1].content)
-
-// const nextState = await app.invoke(
-//   { messages: [new HumanMessage('what about ny')] },
-//   { configurable: { thread_id: '42' } }
-// )
-
-// console.log(nextState.messages[nextState.messages.length - 1].content)
 
 async function main() {
   let config = { configurable: { thread_id: 'conversation-num-1' } }
