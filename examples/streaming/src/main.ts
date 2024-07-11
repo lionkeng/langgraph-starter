@@ -13,7 +13,6 @@ import { Runnable, RunnableConfig } from '@langchain/core/runnables'
 import { BaseLanguageModelInput } from '@langchain/core/language_models/base'
 import { ChatGenerationChunk } from '@langchain/core/outputs'
 import { StreamEvent } from '@langchain/core/tracers/log_stream'
-import { AI } from '@langchain/community/experimental/llms/chrome_ai'
 
 interface IState {
   messages: BaseMessage[]

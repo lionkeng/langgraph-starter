@@ -8,24 +8,30 @@ importers:
 
   .:
     dependencies:
+      '@langchain/anthropic':
+        specifier: ^0.2.3
+        version: 0.2.3(encoding@0.1.13)(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
       '@langchain/community':
         specifier: ^0.2.18
-        version: 0.2.18(@langchain/langgraph@0.0.26(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(lodash@4.17.21)(openai@4.52.1(encoding@0.1.13))
+        version: 0.2.18(@langchain/langgraph@0.0.26(better-sqlite3@9.5.0)(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(axios@1.7.2)(better-sqlite3@9.5.0)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(lodash@4.17.21)(openai@4.52.1(encoding@0.1.13))
       '@langchain/core':
         specifier: ^0.2.15
-        version: 0.2.15(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+        version: 0.2.15(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
       '@langchain/langgraph':
         specifier: ^0.0.26
-        version: 0.0.26(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+        version: 0.0.26(better-sqlite3@9.5.0)(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
       '@langchain/openai':
         specifier: ^0.0.34
-        version: 0.0.34(encoding@0.1.13)(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))
+        version: 0.0.34(encoding@0.1.13)(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))
+      better-sqlite3:
+        specifier: ^9.5.0
+        version: 9.5.0
       langchain:
         specifier: ^0.2.9
-        version: 0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13))
+        version: 0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13))
       langsmith:
         specifier: ^0.1.36
-        version: 0.1.36(@langchain/core@0.2.15(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+        version: 0.1.36(@langchain/core@0.2.15(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
       zod:
         specifier: ^3.23.8
         version: 3.23.8
@@ -45,6 +51,9 @@ importers:
       '@tsconfig/recommended':
         specifier: ^1.0.7
         version: 1.0.7
+      '@types/better-sqlite3':
+        specifier: ^7.6.11
+        version: 7.6.11
       '@types/node':
         specifier: ^20.14.10
         version: 20.14.10
@@ -77,19 +86,19 @@ importers:
     dependencies:
       '@langchain/community':
         specifier: '*'
-        version: 0.2.15(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(lodash@4.17.21)(openai@4.52.1(encoding@0.1.13))
+        version: 0.2.15(axios@1.7.2)(better-sqlite3@9.5.0)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(lodash@4.17.21)(openai@4.52.1(encoding@0.1.13))
       '@langchain/core':
         specifier: '*'
-        version: 0.2.10(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+        version: 0.2.10(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
       '@langchain/langgraph':
         specifier: '*'
-        version: 0.0.25(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+        version: 0.0.25(better-sqlite3@9.5.0)(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
       '@langchain/openai':
         specifier: '*'
-        version: 0.2.1(encoding@0.1.13)(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))
+        version: 0.2.1(encoding@0.1.13)(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))
       langchain:
         specifier: '*'
-        version: 0.2.8(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13))
+        version: 0.2.8(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13))
       zod:
         specifier: '*'
         version: 3.23.8
@@ -132,13 +141,13 @@ importers:
     dependencies:
       '@langchain/core':
         specifier: '*'
-        version: 0.2.10(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+        version: 0.2.10(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
       '@langchain/langgraph':
         specifier: '*'
-        version: 0.0.25(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+        version: 0.0.25(better-sqlite3@9.5.0)(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
       '@langchain/openai':
         specifier: '*'
-        version: 0.0.34(encoding@0.1.13)(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))
+        version: 0.0.34(encoding@0.1.13)(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))
       zod:
         specifier: '*'
         version: 3.23.8
@@ -181,13 +190,13 @@ importers:
     dependencies:
       '@langchain/core':
         specifier: '*'
-        version: 0.2.0(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+        version: 0.2.0(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
       '@langchain/langgraph':
         specifier: '*'
-        version: 0.0.19(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+        version: 0.0.19(better-sqlite3@9.5.0)(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
       '@langchain/openai':
         specifier: '*'
-        version: 0.0.33(encoding@0.1.13)(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))
+        version: 0.0.33(encoding@0.1.13)(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))
     devDependencies:
       '@swc/cli':
         specifier: '*'
@@ -223,17 +232,69 @@ importers:
         specifier: '*'
         version: 5.2.2
 
+  examples/persistence:
+    dependencies:
+      '@langchain/community':
+        specifier: ^0.2.18
+        version: 0.2.18(@langchain/langgraph@0.0.26(better-sqlite3@9.5.0)(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(axios@1.7.2)(better-sqlite3@9.5.0)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(lodash@4.17.21)(openai@4.52.1(encoding@0.1.13))
+      '@langchain/core':
+        specifier: '*'
+        version: 0.2.15(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      '@langchain/langgraph':
+        specifier: '*'
+        version: 0.0.26(better-sqlite3@9.5.0)(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      '@langchain/openai':
+        specifier: '*'
+        version: 0.0.34(encoding@0.1.13)(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))
+      zod:
+        specifier: '*'
+        version: 3.23.8
+    devDependencies:
+      '@swc/cli':
+        specifier: '*'
+        version: 0.1.65(@swc/core@1.6.13(@swc/helpers@0.5.11))
+      '@swc/core':
+        specifier: '*'
+        version: 1.6.13(@swc/helpers@0.5.11)
+      '@swc/helpers':
+        specifier: '*'
+        version: 0.5.11
+      '@tsconfig/node18':
+        specifier: '*'
+        version: 18.2.4
+      '@types/node':
+        specifier: '*'
+        version: 20.14.10
+      dotenv:
+        specifier: '*'
+        version: 16.4.5
+      regenerator-runtime:
+        specifier: '*'
+        version: 0.14.1
+      ts-node:
+        specifier: '*'
+        version: 10.9.2(@swc/core@1.6.13(@swc/helpers@0.5.11))(@types/node@20.14.10)(typescript@5.5.3)
+      tsconfig-paths:
+        specifier: '*'
+        version: 4.2.0
+      tsx:
+        specifier: '*'
+        version: 4.16.2
+      typescript:
+        specifier: '*'
+        version: 5.5.3
+
   examples/streaming:
     dependencies:
       '@langchain/core':
         specifier: '*'
-        version: 0.2.10(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+        version: 0.2.10(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
       '@langchain/langgraph':
         specifier: '*'
-        version: 0.0.25(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+        version: 0.0.25(better-sqlite3@9.5.0)(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
       '@langchain/openai':
         specifier: '*'
-        version: 0.0.34(encoding@0.1.13)(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))
+        version: 0.0.34(encoding@0.1.13)(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))
       zod:
         specifier: '*'
         version: 3.23.8
@@ -273,6 +334,9 @@ importers:
         version: 5.5.2
 
 packages:
+
+  '@anthropic-ai/sdk@0.22.0':
+    resolution: {integrity: sha512-dv4BCC6FZJw3w66WNLsHlUFjhu19fS1L/5jMPApwhZLa/Oy1j0A2i3RypmDtHEPp4Wwg3aZkSHksp7VzYWjzmw==}
 
   '@babel/code-frame@7.24.7':
     resolution: {integrity: sha512-BcYH1CVJBO9tvyIZ2jVeXgSIMvGZ2FDRvDdOIVQyuklNKSsx+eppDEBq/g47Ayw+RqNFE+URvOShmf+f/qwAlA==}
@@ -590,6 +654,10 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.9':
     resolution: {integrity: sha512-3Belt6tdc8bPgAtbcmdtNJlirVoTmEb5e2gC94PnkwEW9jI6CAHUeoG85tjWP5WquqfavoMtMwiG4P926ZKKuQ==}
+
+  '@langchain/anthropic@0.2.3':
+    resolution: {integrity: sha512-f2fqzLGcvsXXUyZ1vl8cgwkKDGLshOGrPuR9hkhGuBG5m91eq755OqPBxWJuS1TFtNU813cXft3xh0MQbxavwg==}
+    engines: {node: '>=18'}
 
   '@langchain/community@0.2.15':
     resolution: {integrity: sha512-WOsNQGhriXh5tqRWfX3nthWO6RoVtM5kceX2GbJhqk09KV4R+1QmrOyph3OrpmjRA/YuSf0a+94LHY+c/QGolw==}
@@ -1908,6 +1976,9 @@ packages:
     resolution: {integrity: sha512-92F7/SFyufn4DXsha9+QfKnN03JGqtMFMXgSHbZOo8JG59WkTni7UzAouNQDf7AuP9OAMxVOPQcqG3sB7w+kkg==}
     engines: {node: ^16.14.0 || >=18.0.0}
 
+  '@types/better-sqlite3@7.6.11':
+    resolution: {integrity: sha512-i8KcD3PgGtGBLl3+mMYA8PdKkButvPyARxA7IQAd6qeslht13qxb1zzO8dRCtE7U3IoJS782zDBAeoKiM695kg==}
+
   '@types/cacheable-request@6.0.3':
     resolution: {integrity: sha512-IQ3EbTzGxIigb1I3qPZc1rWJnH0BmSKv5QYTalEwweFvyBDLSAe24zP0le/hyi7ecGfZVlIVAg4BZqb8WBwKqw==}
 
@@ -2081,6 +2152,9 @@ packages:
   before-after-hook@2.2.3:
     resolution: {integrity: sha512-NzUnlZexiaH/46WDhANlyR2bXRopNg4F/zuSA3OpZnllCUgRaOF2znDioDWrmbNVsuZk6l9pMquQB38cfBZwkQ==}
 
+  better-sqlite3@9.5.0:
+    resolution: {integrity: sha512-01qVcM4gPNwE+PX7ARNiHINwzVuD6nx0gdldaAAcu+MrzyIAukQ31ZDKEpzRO/CNA9sHpxoTZ8rdjoyAin4dyg==}
+
   bin-check@4.1.0:
     resolution: {integrity: sha512-b6weQyEUKsDGFlACWSIOfveEnImkJyK/FGW6FAG42loyoquvjdtOIqO6yBFzHyqyVVhNgNkQxxx09SFLK28YnA==}
     engines: {node: '>=4'}
@@ -2103,6 +2177,9 @@ packages:
 
   binary-search@1.3.6:
     resolution: {integrity: sha512-nbE1WxOTTrUWIfsfZ4aHGYu5DOuNkbxGokjV6Z2kxfJK3uaAb8zNK1muzOeipoLHZjInT4Br88BHpzevc681xA==}
+
+  bindings@1.5.0:
+    resolution: {integrity: sha512-p2q/t/mhvuOj/UeLlV6566GD/guowlr0hHxClI0W9m7MWYkL1F0hLo+0Aexs9HSPCtR1SXQ0TD3MMKrXZajbiQ==}
 
   bl@4.1.0:
     resolution: {integrity: sha512-1W07cM9gS6DcLperZfFSj+bWLtaPGSOHWhPiGzXmvVJbRLdG82sH/Kn8EtW1VqWVA54AKf2h5k5BbnIbwF3h6w==}
@@ -2169,6 +2246,9 @@ packages:
 
   chardet@0.7.0:
     resolution: {integrity: sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==}
+
+  chownr@1.1.4:
+    resolution: {integrity: sha512-jJ0bqzaylmJtVnNgzTeSOs8DPavpbYgEr/b0YL8/2GO3xJEhInFmhKMUnEJQjZumK7KXGFhUy89PrsJWlakBVg==}
 
   chownr@2.0.0:
     resolution: {integrity: sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==}
@@ -2375,6 +2455,10 @@ packages:
       babel-plugin-macros:
         optional: true
 
+  deep-extend@0.6.0:
+    resolution: {integrity: sha512-LOHxIOaPYdHlJRtCQfDIVZtfw/ufM8+rVj649RIHzcm/vGwQRXFt6OPqIFWsm2XEMrNIEtWR64sY1LEKD2vAOA==}
+    engines: {node: '>=4.0.0'}
+
   defaults@1.0.4:
     resolution: {integrity: sha512-eFuaLoy/Rxalv2kr+lqMlUnrDWV+3j4pljOIJgLIhI058IQfWJ7vXhyEIHu+HtC738klGALYxOKDO0bQP3tg8A==}
 
@@ -2396,6 +2480,10 @@ packages:
   detect-indent@5.0.0:
     resolution: {integrity: sha512-rlpvsxUtM0PQvy9iZe640/IWwWYyBsTApREbA1pHOpmOUIl9MkP/U4z7vTtg4Oaojvqhxt7sdufnT0EzGaR31g==}
     engines: {node: '>=4'}
+
+  detect-libc@2.0.3:
+    resolution: {integrity: sha512-bwy0MGW55bG41VqxxypOsdSdGqLwXPI/focwgTYCFMbdUiBAxLg9CFzG08sz2aqzknwiX7Hkl0bQENjg8iLByw==}
+    engines: {node: '>=8'}
 
   diff-sequences@29.6.3:
     resolution: {integrity: sha512-EjePK1srD3P08o2j4f0ExnylqRs5B9tJjcp9t1krH2qRi8CCdsYfwe9JgSLurFBWwq4uOlipzfk5fHNvwFKr8Q==}
@@ -2513,6 +2601,10 @@ packages:
     resolution: {integrity: sha512-8iA79xD3uAch729dUG8xaaBBFGaEa0wdD2VkYLFHwlqosEj/jT66AzcreRDSgV7ehnNLBW2WR5jIXwGKjVdTLg==}
     engines: {node: '>=4'}
 
+  expand-template@2.0.3:
+    resolution: {integrity: sha512-XYfuKMvj4O35f/pOXLObndIRvyQ+/+6AhODh+OKWj9S9498pHHn/IMszH+gt0fBCRWMNfk1ZSp5x3AifmnI2vg==}
+    engines: {node: '>=6'}
+
   exponential-backoff@3.1.1:
     resolution: {integrity: sha512-dX7e/LHVJ6W3DE1MHWi9S1EYzDESENfLrYohG2G++ovZrYOkm4Knwa0mc1cn84xJOR4KEU0WSchhLbd0UklbHw==}
 
@@ -2535,6 +2627,10 @@ packages:
     resolution: {integrity: sha512-oX2ruAFQwf/Orj8m737Y5adxDQO0LAB7/S5MnxCdTNDd4p6BsyIVsv9JQsATbTSq8KHRpLwIHbVlUNatxd+1Ow==}
     engines: {node: '>=8.6.0'}
 
+  fast-xml-parser@4.4.0:
+    resolution: {integrity: sha512-kLY3jFlwIYwBNDojclKsNAC12sfD6NwW74QB2CoNGPvtVxjliYehVunB3HYyNi+n4Tt1dAcgwYvmKF/Z18flqg==}
+    hasBin: true
+
   fastq@1.15.0:
     resolution: {integrity: sha512-wBrocU2LCXXa+lWBt8RoIRD89Fi8OdABODa/kEnyeyjS5aZO5/GNvI5sEINADqP/h8M29UHTHUb53sUu5Ihqdw==}
 
@@ -2545,6 +2641,9 @@ packages:
   file-type@17.1.6:
     resolution: {integrity: sha512-hlDw5Ev+9e883s0pwUsuuYNu4tD7GgpUnOvykjv1Gya0ZIjuKumthDRua90VUn6/nlRKAjcxLUnHNTIUWwWIiw==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+
+  file-uri-to-path@1.0.0:
+    resolution: {integrity: sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw==}
 
   filelist@1.0.4:
     resolution: {integrity: sha512-w1cEuf3S+DrLCQL7ET6kz+gmlJdbq9J7yXCSjK/OZCPA+qEN1WyF4ZAf0YYJa4/shHJra2t/d/r8SV4Ji+x+8Q==}
@@ -2680,6 +2779,9 @@ packages:
 
   gitconfiglocal@1.0.0:
     resolution: {integrity: sha512-spLUXeTAVHxDtKsJc8FkFVgFtMdEN9qPGpL23VfSHx4fP4+Ds097IXLvymbnDH8FnmxX5Nr9bPw3A+AQ6mWEaQ==}
+
+  github-from-package@0.0.0:
+    resolution: {integrity: sha512-SyHy3T1v2NUXn29OsWdxmK6RwHD+vkj3v8en8AOBZ1wBQ/hCAQ5bAQTD02kW4W9tUp/3Qh6J8r9EvntiyCmOOw==}
 
   glob-parent@5.1.2:
     resolution: {integrity: sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==}
@@ -3683,6 +3785,9 @@ packages:
     resolution: {integrity: sha512-bAxsR8BVfj60DWXHE3u30oHzfl4G7khkSuPW+qvpd7jFRHm7dLxOjUk1EHACJ/hxLY8phGJ0YhYHZo7jil7Qdg==}
     engines: {node: '>= 8'}
 
+  mkdirp-classic@0.5.3:
+    resolution: {integrity: sha512-gKLcREMhtuZRwRAfqP3RFW+TK4JqApVBtOIftVgjuABpAtpxhPGaDcfvbhNvD0B8iD1oUr/txX35NjcaY6Ns/A==}
+
   mkdirp@1.0.4:
     resolution: {integrity: sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==}
     engines: {node: '>=10'}
@@ -3728,6 +3833,9 @@ packages:
     resolution: {integrity: sha512-avsJQhyd+680gKXyG/sQc0nXaC6rBkPOfyHYcFb9+hdkqQkR9bdnkJ0AMZhke0oesPqIO+mFFJ+IdBc7mst4IA==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
 
+  napi-build-utils@1.0.2:
+    resolution: {integrity: sha512-ONmRUqK7zj7DWX0D9ADe03wbwOBZxNAfF20PlGfCWQcD3+/MakShIHrMqx9YwPTfxDdF1zLeL+RGZiR9kGMLdg==}
+
   negotiator@0.6.3:
     resolution: {integrity: sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==}
     engines: {node: '>= 0.6'}
@@ -3738,6 +3846,10 @@ packages:
   nice-napi@1.0.2:
     resolution: {integrity: sha512-px/KnJAJZf5RuBGcfD+Sp2pAKq0ytz8j+1NehvgIGFkvtvFrDM3T8E4x/JJODXK9WZow8RRGrbA9QQ3hs+pDhA==}
     os: ['!win32']
+
+  node-abi@3.65.0:
+    resolution: {integrity: sha512-ThjYBfoDNr08AWx6hGaRbfPwxKV9kVzAzOzlLKbk2CuqXE2xnCh+cbAGnwM3t8Lq4v9rUB7VfondlkBckcJrVA==}
+    engines: {node: '>=10'}
 
   node-addon-api@3.2.1:
     resolution: {integrity: sha512-mmcei9JghVNDYydghQmeDX8KoAm0FAiYyIcUt/N4nhyAipB17pllZQDOJD2fotxABnt4Mdz+dKTO7eftLg4d0A==}
@@ -4049,6 +4161,11 @@ packages:
     resolution: {integrity: sha512-UMz42UD0UY0EApS0ZL9o1XnLhSTtvvvLe5Dc2H2O56fvRZi+KulDyf5ctDhhtYJBGKStV2FL1fy6253cmLgqVQ==}
     engines: {node: '>=4'}
 
+  prebuild-install@7.1.2:
+    resolution: {integrity: sha512-UnNke3IQb6sgarcZIDU3gbMeTp/9SSU1DAIkil7PrqG1vZlBtY5msYccSKSHDqa3hNg436IXK+SNImReuA1wEQ==}
+    engines: {node: '>=10'}
+    hasBin: true
+
   pretty-format@29.7.0:
     resolution: {integrity: sha512-Pdlw/oPxN+aXdmM9R00JVC9WVFoCLTKJvDVLgmJ+qAffBMxsV85l/Lu7sNx4zSzPyoL2euImuEwHhOXdEgNFZQ==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
@@ -4108,6 +4225,10 @@ packages:
   quick-lru@5.1.1:
     resolution: {integrity: sha512-WuyALRjWPDGtt/wzJiadO5AXY+8hZ80hVpe6MyivgraREW751X3SbhRvG3eLKOYN+8VEvqLcf3wdnt44Z4S4SA==}
     engines: {node: '>=10'}
+
+  rc@1.2.8:
+    resolution: {integrity: sha512-y3bGgqKj3QBdxLbLkomlohkvsA8gdAiUQlSBJnBhfn+BPxg4bc62d8TcBW15wavDfgexCgccckhcZvywyQYPOw==}
+    hasBin: true
 
   react-is@18.3.1:
     resolution: {integrity: sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==}
@@ -4283,6 +4404,12 @@ packages:
     resolution: {integrity: sha512-8G+/XDU8wNsJOQS5ysDVO0Etg9/2uA5gR9l4ZwijjlwxBcrU6RPfwi2+jJmbP+Ap1Hlp/nVAaEO4Fj22/SL2gQ==}
     engines: {node: ^16.14.0 || >=18.0.0}
 
+  simple-concat@1.0.1:
+    resolution: {integrity: sha512-cSFtAPtRhljv69IK0hTVZQ+OfE9nePi/rtJmw5UjHeVyVroEqJXP1sFztKUy1qU+xvz3u/sfYJLa947b7nAN2Q==}
+
+  simple-get@4.0.1:
+    resolution: {integrity: sha512-brv7p5WgH0jmQJr1ZDDfKDOSeWWg+OVypG99A/5vYGPqJ6pxiaHLy8nxtFjBA7oMa01ebA9gfh1uMCFqOuXxvA==}
+
   slash@3.0.0:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
     engines: {node: '>=8'}
@@ -4389,9 +4516,16 @@ packages:
     resolution: {integrity: sha512-laJTa3Jb+VQpaC6DseHhF7dXVqHTfJPCRDaEbid/drOhgitgYku/letMUqOXFoWV0zIIUbjpdH2t+tYj4bQMRQ==}
     engines: {node: '>=8'}
 
+  strip-json-comments@2.0.1:
+    resolution: {integrity: sha512-4gB8na07fecVVkOI6Rs4e7T6NOTki5EmL7TUduTs6bu3EdnSycntVJ4re8kgZA+wx9IueI2Y11bfbgwtzuE0KQ==}
+    engines: {node: '>=0.10.0'}
+
   strip-outer@2.0.0:
     resolution: {integrity: sha512-A21Xsm1XzUkK0qK1ZrytDUvqsQWict2Cykhvi0fBQntGG5JSprESasEyV1EZ/4CiR5WB5KjzLTrP/bO37B0wPg==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+
+  strnum@1.0.5:
+    resolution: {integrity: sha512-J8bbNyKKXl5qYcR36TIO8W3mVGVHrmmxsd5PAItGkmyzwJvybiw2IVq5nqd0i4LSNSkB/sx9VHllbfFdr9k1JA==}
 
   strong-log-transformer@2.1.0:
     resolution: {integrity: sha512-B3Hgul+z0L9a236FAUC9iZsL+nVHgoCJnqCbN588DjYxvGXaXaaFbfmQ/JhvKjZwsOukuR72XbHv71Qkug0HxA==}
@@ -4413,6 +4547,9 @@ packages:
   supports-preserve-symlinks-flag@1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
+
+  tar-fs@2.1.1:
+    resolution: {integrity: sha512-V0r2Y9scmbDRLCNex/+hYzvp/zyYjvFbHPNgVTKfQvVrb6guiE/fxP+XblDNR011utopbkex2nM4dHNV6GDsng==}
 
   tar-stream@2.2.0:
     resolution: {integrity: sha512-ujeqbceABgwMZxEJnk2HDY2DlnUZ+9oEcb1KzTVfYHio0UE6dG71n60d8D2I4qNvleWrrXpmjpt7vZeF1LnMZQ==}
@@ -4506,6 +4643,9 @@ packages:
   tuf-js@2.2.1:
     resolution: {integrity: sha512-GwIJau9XaA8nLVbUXsN3IlFi7WmQ48gBUrl3FTkkL/XLu/POhBzfmX9hd33FNMX1qAsfl6ozO1iMmW9NC8YniA==}
     engines: {node: ^16.14.0 || >=18.0.0}
+
+  tunnel-agent@0.6.0:
+    resolution: {integrity: sha512-McnNiV1l8RYeY8tBgEpuodCC1mLUdbSN+CYBL7kJsJNInOP8UjDDEwdk6Mw60vdLLrr5NHKZhMAOSrR2NZuQ+w==}
 
   turbo-darwin-64@1.13.4:
     resolution: {integrity: sha512-A0eKd73R7CGnRinTiS7txkMElg+R5rKFp9HV7baDiEL4xTG1FIg/56Vm7A5RVgg8UNgG2qNnrfatJtb+dRmNdw==}
@@ -4751,6 +4891,19 @@ packages:
 
 snapshots:
 
+  '@anthropic-ai/sdk@0.22.0(encoding@0.1.13)':
+    dependencies:
+      '@types/node': 18.19.39
+      '@types/node-fetch': 2.6.11
+      abort-controller: 3.0.0
+      agentkeepalive: 4.5.0
+      form-data-encoder: 1.7.2
+      formdata-node: 4.4.1
+      node-fetch: 2.7.0(encoding@0.1.13)
+      web-streams-polyfill: 3.3.3
+    transitivePeerDependencies:
+      - encoding
+
   '@babel/code-frame@7.24.7':
     dependencies:
       '@babel/highlight': 7.24.7
@@ -4933,20 +5086,33 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.4.15
 
-  '@langchain/community@0.2.15(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(lodash@4.17.21)(openai@4.52.1(encoding@0.1.13))':
+  '@langchain/anthropic@0.2.3(encoding@0.1.13)(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))':
     dependencies:
-      '@langchain/core': 0.2.10(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
-      '@langchain/openai': 0.1.3(encoding@0.1.13)(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))
+      '@anthropic-ai/sdk': 0.22.0(encoding@0.1.13)
+      '@langchain/core': 0.2.15(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      fast-xml-parser: 4.4.0
+      zod: 3.23.8
+      zod-to-json-schema: 3.23.1(zod@3.23.8)
+    transitivePeerDependencies:
+      - encoding
+      - langchain
+      - openai
+
+  '@langchain/community@0.2.15(axios@1.7.2)(better-sqlite3@9.5.0)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(lodash@4.17.21)(openai@4.52.1(encoding@0.1.13))':
+    dependencies:
+      '@langchain/core': 0.2.10(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      '@langchain/openai': 0.1.3(encoding@0.1.13)(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))
       binary-extensions: 2.3.0
       expr-eval: 2.0.2
       flat: 5.0.2
       js-yaml: 4.1.0
-      langchain: 0.2.3(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13))
-      langsmith: 0.1.36(@langchain/core@0.2.10(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      langchain: 0.2.3(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13))
+      langsmith: 0.1.36(@langchain/core@0.2.10(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
       uuid: 9.0.1
       zod: 3.23.8
       zod-to-json-schema: 3.23.1(zod@3.23.8)
     optionalDependencies:
+      better-sqlite3: 9.5.0
       ignore: 5.3.1
       lodash: 4.17.21
     transitivePeerDependencies:
@@ -4959,21 +5125,22 @@ snapshots:
       - peggy
       - pyodide
 
-  '@langchain/community@0.2.18(@langchain/langgraph@0.0.26(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(lodash@4.17.21)(openai@4.52.1(encoding@0.1.13))':
+  '@langchain/community@0.2.18(@langchain/langgraph@0.0.26(better-sqlite3@9.5.0)(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(axios@1.7.2)(better-sqlite3@9.5.0)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(lodash@4.17.21)(openai@4.52.1(encoding@0.1.13))':
     dependencies:
-      '@langchain/core': 0.2.15(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
-      '@langchain/openai': 0.1.3(encoding@0.1.13)(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))
+      '@langchain/core': 0.2.15(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      '@langchain/openai': 0.1.3(encoding@0.1.13)(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))
       binary-extensions: 2.3.0
       expr-eval: 2.0.2
       flat: 5.0.2
       js-yaml: 4.1.0
-      langchain: 0.2.3(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13))
-      langsmith: 0.1.36(@langchain/core@0.2.15(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      langchain: 0.2.3(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13))
+      langsmith: 0.1.36(@langchain/core@0.2.15(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
       uuid: 10.0.0
       zod: 3.23.8
       zod-to-json-schema: 3.23.1(zod@3.23.8)
     optionalDependencies:
-      '@langchain/langgraph': 0.0.26(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      '@langchain/langgraph': 0.0.26(better-sqlite3@9.5.0)(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      better-sqlite3: 9.5.0
       ignore: 5.3.1
       lodash: 4.17.21
     transitivePeerDependencies:
@@ -4986,13 +5153,13 @@ snapshots:
       - peggy
       - pyodide
 
-  '@langchain/core@0.1.63(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))':
+  '@langchain/core@0.1.63(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))':
     dependencies:
       ansi-styles: 5.2.0
       camelcase: 6.3.0
       decamelize: 1.2.0
       js-tiktoken: 1.0.12
-      langsmith: 0.1.36(@langchain/core@0.1.63(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      langsmith: 0.1.36(@langchain/core@0.1.63(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
       ml-distance: 4.0.1
       mustache: 4.2.0
       p-queue: 6.6.2
@@ -5004,13 +5171,13 @@ snapshots:
       - langchain
       - openai
 
-  '@langchain/core@0.2.0(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.47.1(encoding@0.1.13))':
+  '@langchain/core@0.2.0(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.47.1(encoding@0.1.13))':
     dependencies:
       ansi-styles: 5.2.0
       camelcase: 6.3.0
       decamelize: 1.2.0
       js-tiktoken: 1.0.12
-      langsmith: 0.1.36(@langchain/core@0.2.0(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.47.1(encoding@0.1.13)))(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.47.1(encoding@0.1.13))
+      langsmith: 0.1.36(@langchain/core@0.2.0(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.47.1(encoding@0.1.13)))(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.47.1(encoding@0.1.13))
       ml-distance: 4.0.1
       mustache: 4.2.0
       p-queue: 6.6.2
@@ -5022,13 +5189,13 @@ snapshots:
       - langchain
       - openai
 
-  '@langchain/core@0.2.0(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))':
+  '@langchain/core@0.2.0(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))':
     dependencies:
       ansi-styles: 5.2.0
       camelcase: 6.3.0
       decamelize: 1.2.0
       js-tiktoken: 1.0.12
-      langsmith: 0.1.36(@langchain/core@0.2.0(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      langsmith: 0.1.36(@langchain/core@0.2.0(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
       ml-distance: 4.0.1
       mustache: 4.2.0
       p-queue: 6.6.2
@@ -5040,13 +5207,13 @@ snapshots:
       - langchain
       - openai
 
-  '@langchain/core@0.2.10(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))':
+  '@langchain/core@0.2.10(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))':
     dependencies:
       ansi-styles: 5.2.0
       camelcase: 6.3.0
       decamelize: 1.2.0
       js-tiktoken: 1.0.12
-      langsmith: 0.1.36(@langchain/core@0.2.10(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      langsmith: 0.1.36(@langchain/core@0.2.10(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
       ml-distance: 4.0.1
       mustache: 4.2.0
       p-queue: 6.6.2
@@ -5058,13 +5225,13 @@ snapshots:
       - langchain
       - openai
 
-  '@langchain/core@0.2.10(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))':
+  '@langchain/core@0.2.10(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))':
     dependencies:
       ansi-styles: 5.2.0
       camelcase: 6.3.0
       decamelize: 1.2.0
       js-tiktoken: 1.0.12
-      langsmith: 0.1.36(@langchain/core@0.2.10(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      langsmith: 0.1.36(@langchain/core@0.2.10(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
       ml-distance: 4.0.1
       mustache: 4.2.0
       p-queue: 6.6.2
@@ -5076,13 +5243,13 @@ snapshots:
       - langchain
       - openai
 
-  '@langchain/core@0.2.10(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))':
+  '@langchain/core@0.2.10(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))':
     dependencies:
       ansi-styles: 5.2.0
       camelcase: 6.3.0
       decamelize: 1.2.0
       js-tiktoken: 1.0.12
-      langsmith: 0.1.36(@langchain/core@0.2.10(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      langsmith: 0.1.36(@langchain/core@0.2.10(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
       ml-distance: 4.0.1
       mustache: 4.2.0
       p-queue: 6.6.2
@@ -5094,31 +5261,13 @@ snapshots:
       - langchain
       - openai
 
-  '@langchain/core@0.2.15(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))':
+  '@langchain/core@0.2.15(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))':
     dependencies:
       ansi-styles: 5.2.0
       camelcase: 6.3.0
       decamelize: 1.2.0
       js-tiktoken: 1.0.12
-      langsmith: 0.1.36(@langchain/core@0.2.15(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
-      ml-distance: 4.0.1
-      mustache: 4.2.0
-      p-queue: 6.6.2
-      p-retry: 4.6.2
-      uuid: 10.0.0
-      zod: 3.23.8
-      zod-to-json-schema: 3.23.1(zod@3.23.8)
-    transitivePeerDependencies:
-      - langchain
-      - openai
-
-  '@langchain/core@0.2.15(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))':
-    dependencies:
-      ansi-styles: 5.2.0
-      camelcase: 6.3.0
-      decamelize: 1.2.0
-      js-tiktoken: 1.0.12
-      langsmith: 0.1.36(@langchain/core@0.2.15(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      langsmith: 0.1.36(@langchain/core@0.2.15(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
       ml-distance: 4.0.1
       mustache: 4.2.0
       p-queue: 6.6.2
@@ -5130,41 +5279,85 @@ snapshots:
       - langchain
       - openai
 
-  '@langchain/langgraph@0.0.19(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))':
+  '@langchain/core@0.2.15(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))':
     dependencies:
-      '@langchain/core': 0.1.63(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
-      uuid: 9.0.1
-    transitivePeerDependencies:
-      - langchain
-      - openai
-
-  '@langchain/langgraph@0.0.25(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))':
-    dependencies:
-      '@langchain/core': 0.2.10(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
-      uuid: 9.0.1
-    transitivePeerDependencies:
-      - langchain
-      - openai
-
-  '@langchain/langgraph@0.0.25(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))':
-    dependencies:
-      '@langchain/core': 0.2.10(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
-      uuid: 9.0.1
-    transitivePeerDependencies:
-      - langchain
-      - openai
-
-  '@langchain/langgraph@0.0.26(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))':
-    dependencies:
-      '@langchain/core': 0.2.15(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      ansi-styles: 5.2.0
+      camelcase: 6.3.0
+      decamelize: 1.2.0
+      js-tiktoken: 1.0.12
+      langsmith: 0.1.36(@langchain/core@0.2.15(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      ml-distance: 4.0.1
+      mustache: 4.2.0
+      p-queue: 6.6.2
+      p-retry: 4.6.2
       uuid: 10.0.0
+      zod: 3.23.8
+      zod-to-json-schema: 3.23.1(zod@3.23.8)
     transitivePeerDependencies:
       - langchain
       - openai
 
-  '@langchain/openai@0.0.33(encoding@0.1.13)(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))':
+  '@langchain/core@0.2.15(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))':
     dependencies:
-      '@langchain/core': 0.2.0(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.47.1(encoding@0.1.13))
+      ansi-styles: 5.2.0
+      camelcase: 6.3.0
+      decamelize: 1.2.0
+      js-tiktoken: 1.0.12
+      langsmith: 0.1.36(@langchain/core@0.2.15(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      ml-distance: 4.0.1
+      mustache: 4.2.0
+      p-queue: 6.6.2
+      p-retry: 4.6.2
+      uuid: 10.0.0
+      zod: 3.23.8
+      zod-to-json-schema: 3.23.1(zod@3.23.8)
+    transitivePeerDependencies:
+      - langchain
+      - openai
+
+  '@langchain/langgraph@0.0.19(better-sqlite3@9.5.0)(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))':
+    dependencies:
+      '@langchain/core': 0.1.63(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      uuid: 9.0.1
+    optionalDependencies:
+      better-sqlite3: 9.5.0
+    transitivePeerDependencies:
+      - langchain
+      - openai
+
+  '@langchain/langgraph@0.0.25(better-sqlite3@9.5.0)(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))':
+    dependencies:
+      '@langchain/core': 0.2.10(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      uuid: 9.0.1
+    optionalDependencies:
+      better-sqlite3: 9.5.0
+    transitivePeerDependencies:
+      - langchain
+      - openai
+
+  '@langchain/langgraph@0.0.25(better-sqlite3@9.5.0)(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))':
+    dependencies:
+      '@langchain/core': 0.2.10(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      uuid: 9.0.1
+    optionalDependencies:
+      better-sqlite3: 9.5.0
+    transitivePeerDependencies:
+      - langchain
+      - openai
+
+  '@langchain/langgraph@0.0.26(better-sqlite3@9.5.0)(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))':
+    dependencies:
+      '@langchain/core': 0.2.15(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      uuid: 10.0.0
+    optionalDependencies:
+      better-sqlite3: 9.5.0
+    transitivePeerDependencies:
+      - langchain
+      - openai
+
+  '@langchain/openai@0.0.33(encoding@0.1.13)(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))':
+    dependencies:
+      '@langchain/core': 0.2.0(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.47.1(encoding@0.1.13))
       js-tiktoken: 1.0.12
       openai: 4.47.1(encoding@0.1.13)
       zod: 3.23.8
@@ -5173,9 +5366,9 @@ snapshots:
       - encoding
       - langchain
 
-  '@langchain/openai@0.0.34(encoding@0.1.13)(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))':
+  '@langchain/openai@0.0.34(encoding@0.1.13)(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))':
     dependencies:
-      '@langchain/core': 0.2.10(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      '@langchain/core': 0.2.10(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
       js-tiktoken: 1.0.12
       openai: 4.52.1(encoding@0.1.13)
       zod: 3.23.8
@@ -5184,9 +5377,9 @@ snapshots:
       - encoding
       - langchain
 
-  '@langchain/openai@0.0.34(encoding@0.1.13)(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))':
+  '@langchain/openai@0.0.34(encoding@0.1.13)(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))':
     dependencies:
-      '@langchain/core': 0.2.10(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      '@langchain/core': 0.2.10(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
       js-tiktoken: 1.0.12
       openai: 4.52.1(encoding@0.1.13)
       zod: 3.23.8
@@ -5195,9 +5388,9 @@ snapshots:
       - encoding
       - langchain
 
-  '@langchain/openai@0.1.3(encoding@0.1.13)(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))':
+  '@langchain/openai@0.1.3(encoding@0.1.13)(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))':
     dependencies:
-      '@langchain/core': 0.2.10(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      '@langchain/core': 0.2.15(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
       js-tiktoken: 1.0.12
       openai: 4.52.1(encoding@0.1.13)
       zod: 3.23.8
@@ -5206,9 +5399,9 @@ snapshots:
       - encoding
       - langchain
 
-  '@langchain/openai@0.2.1(encoding@0.1.13)(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))':
+  '@langchain/openai@0.2.1(encoding@0.1.13)(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))':
     dependencies:
-      '@langchain/core': 0.2.10(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      '@langchain/core': 0.2.10(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
       js-tiktoken: 1.0.12
       openai: 4.52.1(encoding@0.1.13)
       zod: 3.23.8
@@ -5217,9 +5410,9 @@ snapshots:
       - encoding
       - langchain
 
-  '@langchain/openai@0.2.1(encoding@0.1.13)(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))':
+  '@langchain/openai@0.2.1(encoding@0.1.13)(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))':
     dependencies:
-      '@langchain/core': 0.2.10(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      '@langchain/core': 0.2.10(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
       js-tiktoken: 1.0.12
       openai: 4.52.1(encoding@0.1.13)
       zod: 3.23.8
@@ -5228,25 +5421,25 @@ snapshots:
       - encoding
       - langchain
 
-  '@langchain/textsplitters@0.0.3(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))':
+  '@langchain/textsplitters@0.0.3(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))':
     dependencies:
-      '@langchain/core': 0.2.10(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      '@langchain/core': 0.2.15(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
       js-tiktoken: 1.0.12
     transitivePeerDependencies:
       - langchain
       - openai
 
-  '@langchain/textsplitters@0.0.3(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))':
+  '@langchain/textsplitters@0.0.3(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))':
     dependencies:
-      '@langchain/core': 0.2.10(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      '@langchain/core': 0.2.15(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
       js-tiktoken: 1.0.12
     transitivePeerDependencies:
       - langchain
       - openai
 
-  '@langchain/textsplitters@0.0.3(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))':
+  '@langchain/textsplitters@0.0.3(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))':
     dependencies:
-      '@langchain/core': 0.2.10(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      '@langchain/core': 0.2.15(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
       js-tiktoken: 1.0.12
     transitivePeerDependencies:
       - langchain
@@ -5893,18 +6086,22 @@ snapshots:
       '@tufjs/canonical-json': 2.0.0
       minimatch: 9.0.5
 
+  '@types/better-sqlite3@7.6.11':
+    dependencies:
+      '@types/node': 20.14.10
+
   '@types/cacheable-request@6.0.3':
     dependencies:
       '@types/http-cache-semantics': 4.0.4
       '@types/keyv': 3.1.4
-      '@types/node': 20.14.9
+      '@types/node': 20.14.10
       '@types/responselike': 1.0.3
 
   '@types/http-cache-semantics@4.0.4': {}
 
   '@types/keyv@3.1.4':
     dependencies:
-      '@types/node': 20.14.9
+      '@types/node': 20.14.10
 
   '@types/minimatch@3.0.5': {}
 
@@ -5912,7 +6109,7 @@ snapshots:
 
   '@types/node-fetch@2.6.11':
     dependencies:
-      '@types/node': 20.14.9
+      '@types/node': 20.14.10
       form-data: 4.0.0
 
   '@types/node@18.19.39':
@@ -5935,7 +6132,7 @@ snapshots:
 
   '@types/responselike@1.0.3':
     dependencies:
-      '@types/node': 20.14.9
+      '@types/node': 20.14.10
 
   '@types/retry@0.12.0': {}
 
@@ -6046,6 +6243,11 @@ snapshots:
 
   before-after-hook@2.2.3: {}
 
+  better-sqlite3@9.5.0:
+    dependencies:
+      bindings: 1.5.0
+      prebuild-install: 7.1.2
+
   bin-check@4.1.0:
     dependencies:
       execa: 0.7.0
@@ -6072,6 +6274,10 @@ snapshots:
   binary-extensions@2.3.0: {}
 
   binary-search@1.3.6: {}
+
+  bindings@1.5.0:
+    dependencies:
+      file-uri-to-path: 1.0.0
 
   bl@4.1.0:
     dependencies:
@@ -6157,6 +6363,8 @@ snapshots:
       supports-color: 7.2.0
 
   chardet@0.7.0: {}
+
+  chownr@1.1.4: {}
 
   chownr@2.0.0: {}
 
@@ -6353,6 +6561,8 @@ snapshots:
 
   dedent@1.5.3: {}
 
+  deep-extend@0.6.0: {}
+
   defaults@1.0.4:
     dependencies:
       clone: 1.0.4
@@ -6366,6 +6576,8 @@ snapshots:
   deprecation@2.3.1: {}
 
   detect-indent@5.0.0: {}
+
+  detect-libc@2.0.3: {}
 
   diff-sequences@29.6.3: {}
 
@@ -6512,6 +6724,8 @@ snapshots:
     dependencies:
       pify: 2.3.0
 
+  expand-template@2.0.3: {}
+
   exponential-backoff@3.1.1: {}
 
   expr-eval@2.0.2: {}
@@ -6539,6 +6753,10 @@ snapshots:
       merge2: 1.4.1
       micromatch: 4.0.5
 
+  fast-xml-parser@4.4.0:
+    dependencies:
+      strnum: 1.0.5
+
   fastq@1.15.0:
     dependencies:
       reusify: 1.0.4
@@ -6552,6 +6770,8 @@ snapshots:
       readable-web-to-node-stream: 3.0.2
       strtok3: 7.0.0
       token-types: 5.0.1
+
+  file-uri-to-path@1.0.0: {}
 
   filelist@1.0.4:
     dependencies:
@@ -6682,6 +6902,8 @@ snapshots:
   gitconfiglocal@1.0.0:
     dependencies:
       ini: 1.3.8
+
+  github-from-package@0.0.0: {}
 
   glob-parent@5.1.2:
     dependencies:
@@ -7001,17 +7223,17 @@ snapshots:
 
   kind-of@6.0.3: {}
 
-  langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)):
+  langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)):
     dependencies:
-      '@langchain/core': 0.2.15(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
-      '@langchain/openai': 0.0.34(encoding@0.1.13)(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))
-      '@langchain/textsplitters': 0.0.3(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      '@langchain/core': 0.2.15(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      '@langchain/openai': 0.0.34(encoding@0.1.13)(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))
+      '@langchain/textsplitters': 0.0.3(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
       binary-extensions: 2.3.0
       js-tiktoken: 1.0.12
       js-yaml: 4.1.0
       jsonpointer: 5.0.1
       langchainhub: 0.0.11
-      langsmith: 0.1.36(@langchain/core@0.2.15(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      langsmith: 0.1.36(@langchain/core@0.2.15(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
       ml-distance: 4.0.1
       openapi-types: 12.1.3
       p-retry: 4.6.2
@@ -7021,23 +7243,24 @@ snapshots:
       zod-to-json-schema: 3.23.1(zod@3.23.8)
     optionalDependencies:
       axios: 1.7.2
+      fast-xml-parser: 4.4.0
       handlebars: 4.7.8
       ignore: 5.3.1
     transitivePeerDependencies:
       - encoding
       - openai
 
-  langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)):
+  langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)):
     dependencies:
-      '@langchain/core': 0.2.10(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
-      '@langchain/openai': 0.2.1(encoding@0.1.13)(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))
-      '@langchain/textsplitters': 0.0.3(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      '@langchain/core': 0.2.10(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      '@langchain/openai': 0.2.1(encoding@0.1.13)(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))
+      '@langchain/textsplitters': 0.0.3(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
       binary-extensions: 2.3.0
       js-tiktoken: 1.0.12
       js-yaml: 4.1.0
       jsonpointer: 5.0.1
       langchainhub: 0.0.11
-      langsmith: 0.1.36(@langchain/core@0.2.10(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      langsmith: 0.1.36(@langchain/core@0.2.10(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
       ml-distance: 4.0.1
       openapi-types: 12.1.3
       p-retry: 4.6.2
@@ -7047,23 +7270,24 @@ snapshots:
       zod-to-json-schema: 3.23.1(zod@3.23.8)
     optionalDependencies:
       axios: 1.7.2
+      fast-xml-parser: 4.4.0
       handlebars: 4.7.8
       ignore: 5.3.1
     transitivePeerDependencies:
       - encoding
       - openai
 
-  langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)):
+  langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)):
     dependencies:
-      '@langchain/core': 0.2.15(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
-      '@langchain/openai': 0.2.1(encoding@0.1.13)(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))
-      '@langchain/textsplitters': 0.0.3(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      '@langchain/core': 0.2.15(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      '@langchain/openai': 0.2.1(encoding@0.1.13)(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))
+      '@langchain/textsplitters': 0.0.3(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
       binary-extensions: 2.3.0
       js-tiktoken: 1.0.12
       js-yaml: 4.1.0
       jsonpointer: 5.0.1
       langchainhub: 0.0.11
-      langsmith: 0.1.36(@langchain/core@0.2.15(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      langsmith: 0.1.36(@langchain/core@0.2.15(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
       ml-distance: 4.0.1
       openapi-types: 12.1.3
       p-retry: 4.6.2
@@ -7073,6 +7297,7 @@ snapshots:
       zod-to-json-schema: 3.23.1(zod@3.23.8)
     optionalDependencies:
       axios: 1.7.2
+      fast-xml-parser: 4.4.0
       handlebars: 4.7.8
       ignore: 5.3.1
     transitivePeerDependencies:
@@ -7081,7 +7306,7 @@ snapshots:
 
   langchainhub@0.0.11: {}
 
-  langsmith@0.1.36(@langchain/core@0.1.63(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)):
+  langsmith@0.1.36(@langchain/core@0.1.63(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)):
     dependencies:
       '@types/uuid': 9.0.8
       commander: 10.0.1
@@ -7089,11 +7314,11 @@ snapshots:
       p-retry: 4.6.2
       uuid: 9.0.1
     optionalDependencies:
-      '@langchain/core': 0.1.63(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
-      langchain: 0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13))
+      '@langchain/core': 0.1.63(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      langchain: 0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13))
       openai: 4.52.1(encoding@0.1.13)
 
-  langsmith@0.1.36(@langchain/core@0.2.0(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.47.1(encoding@0.1.13)))(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.47.1(encoding@0.1.13)):
+  langsmith@0.1.36(@langchain/core@0.2.0(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.47.1(encoding@0.1.13)))(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.47.1(encoding@0.1.13)):
     dependencies:
       '@types/uuid': 9.0.8
       commander: 10.0.1
@@ -7101,11 +7326,11 @@ snapshots:
       p-retry: 4.6.2
       uuid: 9.0.1
     optionalDependencies:
-      '@langchain/core': 0.2.0(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.47.1(encoding@0.1.13))
-      langchain: 0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13))
+      '@langchain/core': 0.2.0(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.47.1(encoding@0.1.13))
+      langchain: 0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13))
       openai: 4.47.1(encoding@0.1.13)
 
-  langsmith@0.1.36(@langchain/core@0.2.0(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)):
+  langsmith@0.1.36(@langchain/core@0.2.0(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)):
     dependencies:
       '@types/uuid': 9.0.8
       commander: 10.0.1
@@ -7113,11 +7338,11 @@ snapshots:
       p-retry: 4.6.2
       uuid: 9.0.1
     optionalDependencies:
-      '@langchain/core': 0.2.0(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
-      langchain: 0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13))
+      '@langchain/core': 0.2.0(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      langchain: 0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13))
       openai: 4.52.1(encoding@0.1.13)
 
-  langsmith@0.1.36(@langchain/core@0.2.10(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)):
+  langsmith@0.1.36(@langchain/core@0.2.10(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)):
     dependencies:
       '@types/uuid': 9.0.8
       commander: 10.0.1
@@ -7125,11 +7350,11 @@ snapshots:
       p-retry: 4.6.2
       uuid: 9.0.1
     optionalDependencies:
-      '@langchain/core': 0.2.10(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
-      langchain: 0.2.3(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13))
+      '@langchain/core': 0.2.10(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      langchain: 0.2.3(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13))
       openai: 4.52.1(encoding@0.1.13)
 
-  langsmith@0.1.36(@langchain/core@0.2.10(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)):
+  langsmith@0.1.36(@langchain/core@0.2.10(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)):
     dependencies:
       '@types/uuid': 9.0.8
       commander: 10.0.1
@@ -7137,11 +7362,11 @@ snapshots:
       p-retry: 4.6.2
       uuid: 9.0.1
     optionalDependencies:
-      '@langchain/core': 0.2.10(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
-      langchain: 0.2.8(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13))
+      '@langchain/core': 0.2.10(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      langchain: 0.2.8(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13))
       openai: 4.52.1(encoding@0.1.13)
 
-  langsmith@0.1.36(@langchain/core@0.2.10(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)):
+  langsmith@0.1.36(@langchain/core@0.2.10(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)):
     dependencies:
       '@types/uuid': 9.0.8
       commander: 10.0.1
@@ -7149,11 +7374,11 @@ snapshots:
       p-retry: 4.6.2
       uuid: 9.0.1
     optionalDependencies:
-      '@langchain/core': 0.2.10(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
-      langchain: 0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13))
+      '@langchain/core': 0.2.10(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      langchain: 0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13))
       openai: 4.52.1(encoding@0.1.13)
 
-  langsmith@0.1.36(@langchain/core@0.2.15(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)):
+  langsmith@0.1.36(@langchain/core@0.2.15(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)):
     dependencies:
       '@types/uuid': 9.0.8
       commander: 10.0.1
@@ -7161,11 +7386,11 @@ snapshots:
       p-retry: 4.6.2
       uuid: 9.0.1
     optionalDependencies:
-      '@langchain/core': 0.2.15(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
-      langchain: 0.2.3(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13))
+      '@langchain/core': 0.2.15(langchain@0.2.3(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      langchain: 0.2.3(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13))
       openai: 4.52.1(encoding@0.1.13)
 
-  langsmith@0.1.36(@langchain/core@0.2.15(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)):
+  langsmith@0.1.36(@langchain/core@0.2.15(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)):
     dependencies:
       '@types/uuid': 9.0.8
       commander: 10.0.1
@@ -7173,8 +7398,20 @@ snapshots:
       p-retry: 4.6.2
       uuid: 9.0.1
     optionalDependencies:
-      '@langchain/core': 0.2.15(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
-      langchain: 0.2.9(axios@1.7.2)(encoding@0.1.13)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13))
+      '@langchain/core': 0.2.15(langchain@0.2.8(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      langchain: 0.2.8(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13))
+      openai: 4.52.1(encoding@0.1.13)
+
+  langsmith@0.1.36(@langchain/core@0.2.15(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)))(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13)):
+    dependencies:
+      '@types/uuid': 9.0.8
+      commander: 10.0.1
+      p-queue: 6.6.2
+      p-retry: 4.6.2
+      uuid: 9.0.1
+    optionalDependencies:
+      '@langchain/core': 0.2.15(langchain@0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13)))(openai@4.52.1(encoding@0.1.13))
+      langchain: 0.2.9(axios@1.7.2)(encoding@0.1.13)(fast-xml-parser@4.4.0)(handlebars@4.7.8)(ignore@5.3.1)(openai@4.52.1(encoding@0.1.13))
       openai: 4.52.1(encoding@0.1.13)
 
   lerna@8.1.6(@swc/core@1.6.13(@swc/helpers@0.5.11))(encoding@0.1.13):
@@ -7481,6 +7718,8 @@ snapshots:
       minipass: 3.3.6
       yallist: 4.0.0
 
+  mkdirp-classic@0.5.3: {}
+
   mkdirp@1.0.4: {}
 
   ml-array-mean@1.1.6:
@@ -7524,6 +7763,8 @@ snapshots:
 
   mute-stream@1.0.0: {}
 
+  napi-build-utils@1.0.2: {}
+
   negotiator@0.6.3: {}
 
   neo-async@2.6.2: {}
@@ -7533,6 +7774,10 @@ snapshots:
       node-addon-api: 3.2.1
       node-gyp-build: 4.8.1
     optional: true
+
+  node-abi@3.65.0:
+    dependencies:
+      semver: 7.6.2
 
   node-addon-api@3.2.1:
     optional: true
@@ -7925,6 +8170,21 @@ snapshots:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
 
+  prebuild-install@7.1.2:
+    dependencies:
+      detect-libc: 2.0.3
+      expand-template: 2.0.3
+      github-from-package: 0.0.0
+      minimist: 1.2.8
+      mkdirp-classic: 0.5.3
+      napi-build-utils: 1.0.2
+      node-abi: 3.65.0
+      pump: 3.0.0
+      rc: 1.2.8
+      simple-get: 4.0.1
+      tar-fs: 2.1.1
+      tunnel-agent: 0.6.0
+
   pretty-format@29.7.0:
     dependencies:
       '@jest/schemas': 29.6.3
@@ -7968,6 +8228,13 @@ snapshots:
   quick-lru@4.0.1: {}
 
   quick-lru@5.1.1: {}
+
+  rc@1.2.8:
+    dependencies:
+      deep-extend: 0.6.0
+      ini: 1.3.8
+      minimist: 1.2.8
+      strip-json-comments: 2.0.1
 
   react-is@18.3.1: {}
 
@@ -8135,6 +8402,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  simple-concat@1.0.1: {}
+
+  simple-get@4.0.1:
+    dependencies:
+      decompress-response: 6.0.0
+      once: 1.4.0
+      simple-concat: 1.0.1
+
   slash@3.0.0: {}
 
   smart-buffer@4.2.0: {}
@@ -8238,7 +8513,11 @@ snapshots:
     dependencies:
       min-indent: 1.0.1
 
+  strip-json-comments@2.0.1: {}
+
   strip-outer@2.0.0: {}
+
+  strnum@1.0.5: {}
 
   strong-log-transformer@2.1.0:
     dependencies:
@@ -8260,6 +8539,13 @@ snapshots:
       has-flag: 4.0.0
 
   supports-preserve-symlinks-flag@1.0.0: {}
+
+  tar-fs@2.1.1:
+    dependencies:
+      chownr: 1.1.4
+      mkdirp-classic: 0.5.3
+      pump: 3.0.0
+      tar-stream: 2.2.0
 
   tar-stream@2.2.0:
     dependencies:
@@ -8410,6 +8696,10 @@ snapshots:
       make-fetch-happen: 13.0.1
     transitivePeerDependencies:
       - supports-color
+
+  tunnel-agent@0.6.0:
+    dependencies:
+      safe-buffer: 5.2.1
 
   turbo-darwin-64@1.13.4:
     optional: true
