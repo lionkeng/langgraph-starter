@@ -50,16 +50,16 @@ const toolNode = new ToolNode<AgentState>(tools)
 
 // calling the Anthropic model will not work when there is a tool bound
 // to it. See this issue for more details: https://github.com/langchain-ai/langgraphjs/issues/253#issuecomment-2223712378
-// const model = new ChatAnthropic({
-//   model: 'claude-3-sonnet-20240229',
-//   temperature: 0,
-//   streaming: true,
-// }).bindTools(tools)
-const model = new ChatOpenAI({
-  model: 'gpt-4o',
+const model = new ChatAnthropic({
+  model: 'claude-3-sonnet-20240229',
   temperature: 0,
   streaming: true,
 }).bindTools(tools)
+// const model = new ChatOpenAI({
+//   model: 'gpt-4o',
+//   temperature: 0,
+//   streaming: true,
+// }).bindTools(tools)
 
 // Define the function that determines whether to continue or not
 function shouldContinue(state: AgentState): 'tools' | typeof END {
